@@ -52,7 +52,8 @@ module_exit(static void __exit (*exit_func)(void));
 
 static int __init module_init(void)
 {
-
+    
+     return 0；
 }
 
 static void __exit module_exit(void)
