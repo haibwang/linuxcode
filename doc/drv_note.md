@@ -163,7 +163,7 @@ mount -t nfs -o nolock,nfsvers=3 192.168.1.10:/nfsroot  /mnt/nfs
     *  count: 要申请的设备数量
     *  name：设备名字
     */
-    int alloc_chrdev_region(dev_t *dev, unsigned baseminor, unsigned count, const char *name)
+    int alloc_chrdev_region(dev_t *dev, unsigned baseminor, unsigned count, const char *name);
     
     /*
     *  已知主设备号时采用
@@ -249,7 +249,7 @@ clean:
 	$(MAKE) -C $(KERNALE_ROOT) M=$(MODPATH) clean
 ```
 
-##### 字符设备新的驱动方法
+#### 字符设备新的驱动方法
 
 1. 申请设备号
 
